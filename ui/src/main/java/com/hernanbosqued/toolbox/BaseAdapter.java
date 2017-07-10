@@ -6,7 +6,7 @@ import java.util.List;
 
 public abstract class BaseAdapter<M,VH extends BaseViewHolder> extends RecyclerView.Adapter<VH> {
 
-    private List<M> entities;
+    protected List<M> entities;
 
     public void setData( List<M> entities){
         this.entities = entities;

@@ -14,14 +14,14 @@ public class SectionViewHolder extends BaseViewHolder<Section>{
     public SectionViewHolder(View view, ItemViewHolder.OnItemClickListener listener) {
         super(view);
         this.listener = listener;
-        this.textView = view.findViewById(R.id.titulo);
+        this.textView = view.findViewById(R.id.title);
         this.recyclerView = view.findViewById(R.id.items_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
     }
 
     public void bind(Section section) {
         textView.setText(section.title);
-        ItemsAdapter adapter = new ItemsAdapter(listener);
+        ItemsAdapter adapter = new ItemsAdapter(ITEM_TYPES.get(section.type),listener);
         adapter.setData(section.items);
         recyclerView.setAdapter(adapter);
     }

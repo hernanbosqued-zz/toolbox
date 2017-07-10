@@ -18,7 +18,7 @@ public class MainActivity extends BaseFragmentActivity implements MainFragment.C
 
     @Override
     protected String getActionBarTitle() {
-        return "Main";
+        return getString(R.string.app_name);
     }
 
     @Override

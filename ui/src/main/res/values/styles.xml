@@ -1,11 +1,31 @@
 <resources>
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/gray</item>
     </style>
 
+    <style name="sectionTitle">
+        <item  name="android:textSize">@dimen/section_font_size</item>
+        <item  name="android:fontFamily">roboto</item>
+        <item  name="android:textStyle">bold</item>
+        <item  name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="posterTitle">
+        <item  name="android:textSize">@dimen/item_font_size</item>
+        <item  name="android:fontFamily">roboto</item>
+        <item  name="android:textStyle">bold</item>
+        <item  name="android:textColor">@android:color/white</item>
+        <item  name="android:background">@drawable/gradient</item>
+    </style>
+
+    <style name="thumbTitle">
+        <item  name="android:textSize">@dimen/item_font_size</item>
+        <item  name="android:fontFamily">roboto</item>
+        <item  name="android:textStyle">bold</item>
+        <item  name="android:textColor">@android:color/black</item>
+        <item  name="android:background">@android:color/darker_gray</item>
+    </style>
 </resources>

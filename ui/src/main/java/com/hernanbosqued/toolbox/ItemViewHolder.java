@@ -16,24 +16,23 @@ public class ItemViewHolder extends BaseViewHolder<Item> {
 
     ItemViewHolder(View view, OnItemClickListener listener) {
         super(view);
-        this.textView = view.findViewById(R.id.titulo);
-        this.imageView = view.findViewById(R.id.imagen);
+        this.textView = view.findViewById(R.id.title);
+        this.imageView = view.findViewById(R.id.image);
         this.listener = listener;
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ItemViewHolder.this.listener.onItemClick(ItemViewHolder.this.item);
+            }
+        });
     }
 
     @Override
     public void bind(final Item item) {
         this.item = item;
         this.textView.setText(item.title);
-        this.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onItemClick(ItemViewHolder.this.item);
-            }
-        });
         Glide.with(imageView.getContext())
             .load(item.url)
-            .asBitmap()
             .signature(new StringSignature(String.valueOf(imageView.hashCode())))
             .into(imageView);
     }

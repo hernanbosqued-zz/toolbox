@@ -1,86 +1,52 @@
 [
-	{
-	"title":"titulo1",
-	"type":"tipo1",
-	"items":
-		[
-			{
-			 	"title":"titulo1",
-			 	"url":"http://placeimg.com/640/480/any",
-			 	"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-			},
-			{
-			 	"title":"titulo2",
-			 	"url":"http://placeimg.com/640/480/any",
-			 	"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-			}
-		]
-	},{
-	"title":"titulo1",
-	"type":"tipo1",
-	"items":
-	[
-		{
-			"title":"titulo1",
-			"url":"http://placeimg.com/640/480/any",
-			"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-		},
-		{
-			"title":"titulo2",
-			"url":"http://placeimg.com/640/480/any",
-			"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-		}
-	]
-},{
-	"title":"titulo1",
-	"type":"tipo1",
-	"items":
-	[
-		{
-			"title":"titulo1",
-			"url":"http://placeimg.com/640/480/any",
-			"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-		},
-		{
-			"title":"titulo2",
-			"url":"http://placeimg.com/640/480/any",
-			"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-		}
-	]
-},
-	{
-	"title":"titulo2",
-	"type":"tipo2",
-	"items":
-		[
-			{
-			 	"title":"titulo3",
-			 	"url":"http://placeimg.com/320/480/any",
-			 	"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-			},
-			{
-			 	"title":"titulo4",
-			 	"url":"http://placeimg.com/320/480/any",
-			 	"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-			}
-		]
-	}
-,
-	{
-		"title":"titulo3",
-		"type":"tipo2",
-		"items":
-		[
-			{
-				"title":"titulo3",
-				"url":"http://placeimg.com/320/480/any",
-				"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-			},
-			{
-				"title":"titulo4",
-				"url":"http://placeimg.com/320/480/any",
-				"video":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-			}
-		]
-	}
+  {
+    "title": "Carousel thumb",
+    "type": "thumb",
+    "items": [
+      {
+        "title": "La playa",
+        "url": "http://placeimg.com/640/480/any",
+        "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+      },
+      {
+        "title": "Peligro en Bangkok",
+        "url": "http://placeimg.com/640/480/any",
+        "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+      },
+      {
+        "title": "Todas contra John",
+        "url": "http://placeimg.com/640/480/any",
+        "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+      },
+      {
+        "title": "Quisiera ser millonario",
+        "url": "http://placeimg.com/640/480/any",
+        "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+      }
+    ]
+  },
+  {
+    "title": "Carousel poster",
+    "type": "poster",
+    "items": [
+      {
+        "title": "La playa",
+        "url": "http://placeimg.com/320/480/any",
+        "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+      },
+      {
+        "title": "Peligro en Bangkok",
+        "url": "http://placeimg.com/320/480/any",
+        "video": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+      },
+      {
+        "title": "Todas contra John",
+        "url": "http://placeimg.com/320/480/any"
+      },
+      {
+        "title": "Quisiera ser millonario",
+        "url": "http://placeimg.com/320/480/any"
+      }
+    ]
+  }
 ]
