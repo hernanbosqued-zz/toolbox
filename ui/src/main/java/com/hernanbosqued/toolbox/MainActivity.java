@@ -6,20 +6,16 @@ import android.support.v4.app.Fragment;
 
 public class MainActivity extends BaseFragmentActivity implements MainFragment.Callbacks {
 
-    MainPresenter mainPresenter;
 
     @Override
     protected Fragment getContent() {
-        MainFragment fragment = MainFragment.newInstance();
-        mainPresenter = new MainPresenter( Injection.provideSectionsService(getApplicationContext()), fragment);
-        return fragment;
+        return MainFragment.newInstance();
     }
 
-    protected static Intent getIntent(Context context/*Composition composition*/) {
-        Intent intent = new Intent(context, MainActivity.class);
-        //intent.putExtra(Constants.COMPOSITION, composition);
-        return intent;
+    protected static Intent getIntent(Context context) {
+        return new Intent(context, MainActivity.class);
     }
+
     @Override
     protected String getActionBarTitle() {
         return "Main";

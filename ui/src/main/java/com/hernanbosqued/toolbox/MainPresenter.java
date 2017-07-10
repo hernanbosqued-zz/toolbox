@@ -1,19 +1,34 @@
 package com.hernanbosqued.toolbox;
 
+import android.support.annotation.NonNull;
+
+import com.hernanbosqued.toolbox.domain.Section;
 import com.hernanbosqued.toolbox.domain.SectionsService;
 
-class MainPresenter implements MainContract.Presenter {
-    private SectionsService service;
-    private MainContract.View view;
+import java.util.List;
 
-    MainPresenter(SectionsService service, MainContract.View view) {
+class MainPresenter extends BasePresenter<List<Section>, MainContract.View> {
+    private SectionsService service;
+
+    MainPresenter(SectionsService service) {
         this.service = service;
-        this.view = view;
-        view.setPresenter(this);
+    }
+
+    public void bindView(@NonNull MainContract.View view, boolean hasData) {
+        super.bindView(view);
+
+        if (model == null || !hasData) {
+            view.showLoading();
+            setModel(service.getSections());
+        }
     }
 
     @Override
-    public void loadSections() {
-        view.showSections(service.getSections());
+    protected void updateView() {
+        if (model.size() == 0) {
+            view().showEmpty();
+        } else {
+            view().showSections(model);
+        }
     }
 }

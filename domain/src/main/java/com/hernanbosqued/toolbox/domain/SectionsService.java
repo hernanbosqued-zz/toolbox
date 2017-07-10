@@ -9,10 +9,7 @@ public class SectionsService {
         this.repo = repo;
     }
 
-    public SectionEntity getFirstSection(){
-        return repo.getSections().get(0);
-    }
-    public List<SectionEntity> getSections(){
+    public List<Section> getSections(){
         return repo.getSections();
     }
 }
