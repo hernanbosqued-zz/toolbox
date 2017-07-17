@@ -22,7 +22,12 @@ public class ItemViewHolder extends BaseViewHolder<Item> {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemViewHolder.this.listener.onItemClick(ItemViewHolder.this.item);
+                if( ItemViewHolder.this.item.video == null || ItemViewHolder.this.item.video.isEmpty() ){
+                    ItemViewHolder.this.listener.showNoVideo();
+                }
+                else{
+                    ItemViewHolder.this.listener.onItemClick(ItemViewHolder.this.item);
+                }
             }
         });
     }
@@ -39,5 +44,7 @@ public class ItemViewHolder extends BaseViewHolder<Item> {
 
     public interface OnItemClickListener {
         void onItemClick(Item item);
+
+        void showNoVideo();
     }
 }

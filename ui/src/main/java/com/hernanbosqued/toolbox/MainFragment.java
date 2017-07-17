@@ -16,7 +16,6 @@ import java.util.List;
 
 public class MainFragment extends BaseFragment<MainFragment.Callbacks> implements BaseFragmentActivity.BackPressedCallbacks, MainContract.View, ItemViewHolder.OnItemClickListener {
 
-    private RecyclerView recyclerView;
     private MainPresenter presenter;
     private SectionAdapter adapter;
 
@@ -41,7 +40,7 @@ public class MainFragment extends BaseFragment<MainFragment.Callbacks> implement
     protected Callbacks getDummyCallbacks() {
         return new Callbacks() {
             @Override
-            public void onButtonClicked() {
+            public void onButtonClicked(String video) {
 
             }
         };
@@ -49,11 +48,21 @@ public class MainFragment extends BaseFragment<MainFragment.Callbacks> implement
 
     @Override
     public void onItemClick(Item item) {
-        Toast.makeText(getContext(), item.title, Toast.LENGTH_SHORT).show();
+        if( item.video == null || item.video.isEmpty() ){
+            callbacks.onButtonClicked(item.video);
+        }
+        else{
+            callbacks.onButtonClicked(item.video);
+        }
+    }
+
+    @Override
+    public void showNoVideo() {
+        Toast.makeText(getActivity(), R.string.no_video, Toast.LENGTH_SHORT).show();
     }
 
     public interface Callbacks {
-        void onButtonClicked();
+        void onButtonClicked(String video);
     }
 
     @Override
@@ -94,7 +103,7 @@ public class MainFragment extends BaseFragment<MainFragment.Callbacks> implement
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         linearLayoutManager.setAutoMeasureEnabled(true);
         recyclerView.setLayoutManager(linearLayoutManager);

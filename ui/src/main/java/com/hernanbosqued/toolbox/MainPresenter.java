@@ -14,7 +14,8 @@ class MainPresenter extends BasePresenter<List<Section>, MainContract.View> {
         this.service = service;
     }
 
-    public void bindView(@NonNull MainContract.View view, boolean hasData) {
+
+    void bindView(@NonNull MainContract.View view, boolean hasData) {
         super.bindView(view);
 
         if (model == null || !hasData) {

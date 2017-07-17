@@ -19,7 +19,7 @@ public abstract class BasePresenter<M, V>  {
         return view != null && model != null;
     }
 
-    public void bindView(@NonNull V view) {
+    protected void bindView(@NonNull V view) {
         this.view = new WeakReference<>(view);
     }
 

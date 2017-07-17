@@ -3,6 +3,7 @@ package com.hernanbosqued.toolbox;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.widget.Toast;
 
 public class MainActivity extends BaseFragmentActivity implements MainFragment.Callbacks {
 
@@ -22,6 +23,9 @@ public class MainActivity extends BaseFragmentActivity implements MainFragment.C
     }
 
     @Override
-    public void onButtonClicked() {
+    public void onButtonClicked(String videoUrl) {
+        Intent i = new Intent(this,VideoActivity.class);
+        i.putExtra(getString(R.string.VIDEO_URL_KEY),videoUrl);
+        startActivity(i);
     }
 }
